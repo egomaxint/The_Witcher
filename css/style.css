@@ -61,18 +61,23 @@ body {
   line-height: 16px;
   display: block;
   margin-bottom: 16px;
+  animation-delay: 0.2s;
 }
 .rating {
   display: flex;
   align-items: center;
 }
+
 .rating-stars {
+  display: flex;
   margin-right: 9px;
 }
 
 .rating-number {
+  margin-left: 10px;
   font-size: 12px;
   line-height: 14px;
+  animation-delay: 1s;
 }
 .main-title {
   font-family: 'MasonChronicles';
@@ -80,16 +85,17 @@ body {
   font-size: 76px;
   margin-top: 10px;
   margin-bottom: 10px;
+  animation-delay: 0.5s;
 }
 .main-description {
   max-width: 458px;
   font-size: 14px;
   line-height: 150%;
   margin-bottom: 40px;
+  animation-delay: 0.7s;
 }
 .button {
-  width: 260px;
-  height: 60px;
+  display: inline-block;
   background: #9d2929;
   border-radius: 8px;
   color: #ffffff;
@@ -99,6 +105,11 @@ body {
   font-size: 14px;
   line-height: 16px;
   cursor: pointer;
+  text-decoration: none;
+  animation-delay: 1s;
+}
+.button:active {
+  color: #ffffff;
 }
 .play {
   position: relative;
@@ -120,6 +131,7 @@ body {
   left: -16px;
   top: -16px;
   z-index: -1;
+  animation: pulse 1s ease-in-out 2s infinite;
 }
 .play-img {
   position: absolute;
@@ -194,6 +206,17 @@ body {
   right: -0px;
   z-index: 1;
 }
+.swiper-pagination {
+  display: flex;
+  position: relative;
+  width: auto;
+  top: -50px;
+  left: 170px;
+}
+.swiper-pagination-bullet {
+  background-color: #9d2929;
+  margin-right: 4px;
+}
 
 /* footer */
 .footer {
@@ -255,6 +278,7 @@ body {
     top: 0;
     left: 0;
     background-color: #fff;
+    transition: transform 0.2s;
     margin-top: -7px;
   }
   .menu-button::after {
@@ -266,6 +290,7 @@ body {
     top: 0;
     left: 0;
     background-color: #fff;
+    transition: transform 0.2s;
     margin-top: 7px;
   }
   .menu-button-active {
@@ -273,6 +298,11 @@ body {
   }
   .menu-button-active::before {
     transform: rotate(45deg);
+    margin-top: 0;
+  }
+  .menu-button-active::after {
+    transform: rotate(-45deg);
+    margin-top: 0;
   }
   .header {
     display: none;
@@ -310,5 +340,17 @@ body {
   }
   .swiper-container {
     width: 80%;
+  }
+  .main-content {
+    margin-top: 196px;
+  }
+  .main-title {
+    font-size: 56px;
+  }
+  .series {
+    width: 80%;
+  }
+  .swiper-pagination {
+    left: 60px;
   }
 }
